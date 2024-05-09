@@ -27,6 +27,22 @@ body {
     border-radius: 1rem;
 }
 
+.login {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.login i {
+    background-color: #060C3E;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
 .sign-in-form {
     background-color: #fff;
     margin: 3rem 0.8rem 1.5rem 0.8rem;

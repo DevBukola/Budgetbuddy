@@ -81,6 +81,23 @@ form a:hover {
     display: flex;
 }
 
+.login {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.login i {
+    background-color: #060C3E;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
 .create-account {
     display: flex;
     flex-direction: column;
