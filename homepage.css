@@ -194,6 +194,7 @@ nav .buttons a:hover {
 
     .header-content img {
         scale: 0.5;
+        margin-left: 0.5rem;
     }
     
     .nav--open {
