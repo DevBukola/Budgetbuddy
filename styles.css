@@ -162,6 +162,10 @@ form h4 {
     justify-content: space-between;
 }
 
+.sign-in-button a {
+    color: #fff;
+}
+
 .sign-in-button button {
     width: 100%;
     padding: 12px 36px 12px 32px;
