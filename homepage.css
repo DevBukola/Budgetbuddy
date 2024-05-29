@@ -29,7 +29,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+    padding: 0.3rem;
     box-shadow: 0 0 3px 0 rgba(255, 139, 106, 0.3);
 }
 
@@ -190,6 +190,10 @@ nav .buttons a:hover {
         margin: 5px;
         opacity: 0.8;
         transition: all 0.3s ease-in-out;
+    }
+
+    .header-content img {
+        scale: 0.5;
     }
     
     .nav--open {
