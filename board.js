@@ -22,8 +22,8 @@ function loadData() {
   const storedData = localStorage.getItem('userData');
   if (storedData) {
     userData = JSON.parse(storedData);
-    username.textContent = userData.name;
-    profilePicture.src = userData.profilePicture || '';
+    // username.textContent = userData.name;
+    // profilePicture.src = userData.profilePicture || '';
     totalBudget.textContent = userData.budget.toFixed(2);
     remainingBalance.textContent = calculateRemainingBalance().toFixed(2);
     updateExpenseList();

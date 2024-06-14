@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BudgetBuddy-signIn</title>
+    <title>BudgetBuddy - Sign In</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
@@ -14,7 +15,7 @@
                 <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
                 <div class="logo-area">
                     <img src="./assets/logo.svg" alt="">
-                    <h1>Budgetbuddy</h1>
+                    <h1>BudgetBuddy</h1>
                 </div>
             </div>
             <div class="login-area">
@@ -22,7 +23,7 @@
                 <h4>Email</h4>  
                 <div class="envelope">
                     <i class="fa-regular fa-envelope"></i>
-                    <input type="email" class="input" placeholder="Email address" id="emailAddress">
+                    <input type="email" class="input" placeholder="Email address" id="emailAddress" name="email" required>
                 </div>
                </div>
                <div class="pass"> 
@@ -30,7 +31,7 @@
                 <div class="password-container">
                     <div class="security">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" class="input" placeholder="Password" id="password" name="password">
+                        <input type="password" class="input" placeholder="Password" id="password" name="password" required>
                     </div>
                     <i class="fa-regular fa-eye" id="show-password"></i>
                 </div>
@@ -43,7 +44,7 @@
                 <a href="forgotpass.html">Forgot Password?</a>
                </div>
                <div class="sign-in-button">
-                    <button type="submit"><a href="login-2fa.html">Sign in</a></button>
+                    <button type="submit">Sign in</button>
                </div>
                <div class="sign-up">
                     <p>Don't have an account?</p>
