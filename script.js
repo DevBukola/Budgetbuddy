@@ -41,36 +41,3 @@ registerForm.addEventListener('submit', async (e) => {
     location.assign('/sign-in.html')
   }
 })
-
-// // signIn API integration
- const signInBtn = document.getElementById('signInForm')
-
- const signIn = async () => {
-   console.log('I want to sign in.', passwordField.value, emailField.value)
-   const response = await fetch('https://maduabuchi-001-site1.jtempurl.com/api/auth/login', {
-      method: 'POST',
-      headers: {
-         'Content-Type': 'application/json',
-       },
-       body: JSON.stringify({
-         email: emailField.value, 
-         password: passwordField.value
-       })
-   })
-	const pickup = await response.json()
-  if(!response.ok){
-    response.textContent = pickup.message
-  }
-  if(retrieve.ok){
-    responseOkay.textContent = pickup.message
-    // responseNotOkay.textContent = ''
-    location.assign('/board.html')
-  }
- }
-
-//  signInBtn.addEventListener('submit', (e) => {
-//    e.preventDefault()
-//    signIn()
-//  })
-
-
