@@ -51,7 +51,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 form a {
@@ -68,6 +68,7 @@ form a:hover {
 .logo-area {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 0.5rem;
 }
@@ -84,7 +85,8 @@ form a:hover {
 .login {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .login i {
@@ -125,6 +127,16 @@ form a:hover {
     border-radius: 0.5rem;
     outline: none;
     border: 1px solid gray;
+}
+
+.response {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.response-okay {
+    color: green;
+    font-size: 0.9rem;
 }
 
 .register {
@@ -174,11 +186,28 @@ form a:hover {
     gap: 0.3rem;
 }
 
+.sign-in p {
+    margin-top: 0.1rem;
+}
+
 .sign-in p,
 .sign-in a {
     font-size: 0.8rem;
 }
 
+@media  (max-width :769px) {
+    .logo-area img {
+       width: 1.5rem;
+    }
+
+    .logo-area h1 {
+        font-size: 0.9rem;
+    }
+
+    .login i {
+        font-size: 0.8rem;
+    }
+}
 
 @media  (min-width :770px) {
     .container-wrapper {

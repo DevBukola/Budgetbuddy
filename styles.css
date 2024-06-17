@@ -193,6 +193,16 @@ form h4 {
     color: #FF8B6A;
 }
 
+.response {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.response-okay {
+    color: green;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 760px) {
     .sign-in-form {
         background-color: #fff;
