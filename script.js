@@ -13,10 +13,12 @@ const fullName = document.querySelector('#name')
 const userEmail = document.querySelector('.email')
 const userPassword = document.querySelector('#password')
 const confirmUserPassword = document.querySelector('#cpassword')
+const responseNotOkay = document.querySelector('.response')
+const responseOkay = document.querySelector('.response-okay')
 
-registerForm.addEventListener('submit', (e) => {
+registerForm.addEventListener('submit', async (e) => {
   e.preventDefault()
-  fetch('https://maduabuchi-001-site1.jtempurl.com/api/auth/register', {
+  const retrieve = await fetch('https://maduabuchi-001-site1.jtempurl.com/api/auth/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -28,21 +30,24 @@ registerForm.addEventListener('submit', (e) => {
       confirmPassword: confirmUserPassword.value
     })
   })
-  .then((response) => {
-    return response.json()
-  })
-  .then((data) => {
+  const collect = await retrieve.json()
+  // console.log(collect)
+  if(!retrieve.ok){
+    responseNotOkay.textContent = collect.message
+  }
+  if(retrieve.ok){
+    responseOkay.textContent = collect.message
+    responseNotOkay.textContent = ''
     location.assign('/sign-in.html')
-  })
-  .catch((error) => console.log(error))
+  }
 })
 
 // // signIn API integration
  const signInBtn = document.getElementById('signInForm')
 
- const signIn = () => {
+ const signIn = async () => {
    console.log('I want to sign in.', passwordField.value, emailField.value)
-   fetch('https://maduabuchi-001-site1.jtempurl.com/api/auth/login', {
+   const response = await fetch('https://maduabuchi-001-site1.jtempurl.com/api/auth/login', {
       method: 'POST',
       headers: {
          'Content-Type': 'application/json',
@@ -52,17 +57,20 @@ registerForm.addEventListener('submit', (e) => {
          password: passwordField.value
        })
    })
-	.then(response => response.json())
-  .then((data) => {
+	const pickup = await response.json()
+  if(!response.ok){
+    response.textContent = pickup.message
+  }
+  if(retrieve.ok){
+    responseOkay.textContent = pickup.message
+    // responseNotOkay.textContent = ''
     location.assign('/board.html')
-  })
-	// .then(data => console.log(data))
-	.catch(err => console.error(err));
+  }
  }
 
- signInBtn.addEventListener('submit', (e) => {
-   e.preventDefault()
-   signIn()
- })
+//  signInBtn.addEventListener('submit', (e) => {
+//    e.preventDefault()
+//    signIn()
+//  })
 
 

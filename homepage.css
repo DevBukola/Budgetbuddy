@@ -193,8 +193,11 @@ nav .buttons a:hover {
     }
 
     .header-content img {
-        scale: 0.5;
-        margin-left: 0.5rem;
+        width: 1.7rem;
+    }
+
+    .header-content {
+        padding: 0.8rem;
     }
     
     .nav--open {
