@@ -1,12 +1,30 @@
-const showPassword = document.querySelector("#show-password");
- const passwordField = document.getElementById("password");
- const emailField = document.getElementById("emailAddress");
+// const showPassword = document.querySelector("#show-password");
+//  const passwordField = document.getElementById("password");
+//  const emailField = document.getElementById("emailAddress");
 
- showPassword.addEventListener("click", function(){
-    this.classList.toggle(".fa-eye-slash");
+//  showPassword.addEventListener("click", function(){
+//     this.classList.toggle(".fa-eye-slash");
+//     const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+//     passwordField.setAttribute("type", type);
+//  });
+
+const showPassword = document.querySelector("#show-password");
+const passwordField = document.getElementById("password");
+const showCPassword = document.querySelector("#show-cpassword");
+const cPasswordField = document.getElementById("cpassword");
+const emailField = document.getElementById("emailAddress");
+
+showPassword.addEventListener("click", function(){
+    this.classList.toggle("fa-eye-slash");
     const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
     passwordField.setAttribute("type", type);
- });
+});
+
+showCPassword.addEventListener("click", function(){
+    this.classList.toggle("fa-eye-slash");
+    const type = cPasswordField.getAttribute("type") === "password" ? "text" : "password";
+    cPasswordField.setAttribute("type", type);
+});
 
 const registerForm = document.querySelector('#login-form')
 const fullName = document.querySelector('#name')
