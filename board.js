@@ -154,3 +154,26 @@ function deleteExpense(category, amount) {
   updateExpenseList();
   updateBudgetInfo();
 }
+
+
+// =================== FETCHING DASHBOARD DATA ================== //
+
+const getItemFromLocalStorage = (key) => {
+  return localStorage.getItem(key);
+};
+
+const getDashboard = async () => {
+  const token = getItemFromLocalStorage('token')
+  if(!token) return location.assign('/sign-in.html')
+  const res = await fetch('https://maduabuchi-001-site1.jtempurl.com/api/DashBoard/Dashboard', {
+    headers: {
+      "Authorization": `Bearer ${token}`
+    }
+  })
+
+  const response = await res.json()
+
+  console.log(response)
+}
+
+getDashboard()
