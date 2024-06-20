@@ -28,8 +28,11 @@ const checkLoginStatus = () => {
 
     if (token) {
         goDashboard.setAttribute('href', '/board.html');
-        goDashboard2.setAttribute('href', '/board.html');
-        goDashboard2.textContent = 'Dashboard'
+        goDashboard2.textContent = 'Logout'
+        goDashboard2.addEventListener('click', () => {
+            localStorage.removeItem('token');
+            location.reload();
+        });
     } else {
         goDashboard.setAttribute('href', '/sign-in.html');
         goDashboard2.setAttribute('href', '/sign-in.html');

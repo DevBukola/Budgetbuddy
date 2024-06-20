@@ -17,7 +17,7 @@ const setItemInLocalStorage = (key, value) => {
 
 loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  console.log('email', loginEmail.value)
+  // console.log('email', loginEmail.value)
   const res = await fetch('https://maduabuchi-001-site1.jtempurl.com/api/auth/login', {
     method: 'POST',
     body: JSON.stringify({
@@ -30,14 +30,23 @@ loginForm.addEventListener('submit', async (e) => {
   })
 
   const response = await res.json();
-  if(response.token == "Please input the correct login details!" || !response.token){
-    return loginError.textContent = 'Invalid credentials'
+
+  if(!res.ok){
+    loginError.textContent = response.message;
   }
 
-  setItemInLocalStorage("token", response.token)
-  location.assign('/board.html')
+  if(res.ok){
+    const token = response.token.response.token
+    localStorage.setItem('token', token);
+    location.assign('/board.html')
+  }
   
 })
+
+const token = localStorage.getItem('token')
+if(token){
+  location.assign('/index.html')
+}
 
 
 
