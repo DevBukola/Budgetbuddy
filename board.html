@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,11 +10,6 @@
   <header>
     <h1>Budget Tracker Dashboard</h1>
     <h2>Hello, welcome!</h2>
-    <!-- <div class="profile">
-      <img id="profile-picture" src="" alt="Profile Picture" class="profile-picture">
-      <h2 id="username">User Name</h2>
-      <input type="file" id="profile-picture-input">
-    </div> -->
   </header>
   <main>
     <section class="budget-section">
@@ -40,7 +35,61 @@
           </tr>
         </thead>
         <tbody id="expense-list">
-          <!-- Expenses will be added here -->
+        </tbody>
+      </table>
+    </section>
+    <div class="links">
+      <a href="analytics.html" class="btn">Go to Analytics</a>
+      <a href="index.html" class="btn" id="home">Back to Home</a>
+    </div>
+  </main>
+  <script src="board.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- //THIS// -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Budget Tracker</title>
+  <link rel="stylesheet" href="board.css">
+</head>
+<body>
+  <header>
+    <h1>Budget Tracker Dashboard</h1>
+    <h2>Hello, welcome!</h2>
+  </header>
+  <main>
+    <section class="budget-section">
+      <h2>Set Your Budget</h2>
+      <input type="number" id="budget-input" placeholder="Enter your budget">
+      <p class="budget">Total Budget: <span id="total-budget">0</span></p>
+      <p class="balance">Remaining Balance: <span id="remaining-balance">0</span></p>
+    </section>
+    <section class="expense-section">
+      <h2>Add an Expense</h2>
+      <form id="expense-form">
+        <input type="text" id="expense-category" placeholder="Category" required>
+        <input type="number" id="expense-amount" placeholder="Amount" required>
+        <button type="submit">Add Expense</button>
+      </form>
+      <h2>Expenses</h2>
+      <table id="expense-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="expense-list">
         </tbody>
       </table>
     </section>
