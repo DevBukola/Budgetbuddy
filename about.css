@@ -79,19 +79,39 @@ nav .buttons a:hover {
 }
 
 .nav {
-   display: flex;
-   gap: 8rem;
-   transition: all 0.3s ease-in-out;
-} 
+    display: flex;
+    gap: 8rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav--open {
+    display: block; 
+}
 
 .hero-section {
     position: relative;
     height: 50vh;
 }
 
+.hero-section .about {
+    width: 100%;
+    height: 100%;
+}
+
 .hero-section .about img {
     width: 100%;
-    height: 50%;
+    height: 100%;
+}
+
+.hero-section .about-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+}
+
+.hero-section .about-link a {
+    color: #fff;
 }
 
 .background-color {
@@ -99,91 +119,174 @@ nav .buttons a:hover {
     top: 0;
     left: 0;
     background-color: rgba(13, 7, 48, 0.9);
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 1rem;
     flex-direction: column;
 }
 
-.budget-section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    align-items: center;
-    margin-top: 2rem;
+.background-color h1 {
     color: #fff;
 }
 
-.budget-section h1 {
+.about-section {
+    padding: 2rem 3rem;
+    background-color: #f0e9e7;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.about-section img {
+    width: 35rem;
+    height: 29.5rem;
+}
+
+.about-text .dotted-underline {
+    color: #FF8B6A;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.8em;
+}
+
+.about-text .dotted-underline::after {
+    content: "";
+    position: absolute;
+    border-bottom: 3px dotted;
+    width: 5rem;
+    left: 0;
+    bottom: -3px;
+}
+
+.about-text {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.about-text h1 {
+    color: #0e0a26;
     font-size: 3rem;
-    line-height: 3.5rem;
+    margin-bottom: 1rem;
 }
 
-.budget-section span {
-    display: block;
-    text-align: center;
-    line-height: 1.5rem;
-    font-size: 1rem;
+.about-text p {
+    color: #0e0a26;
+    line-height: 1.6rem;
+    width: 80%;
+    font-weight: 300;
 }
 
-.budget-section button {
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(255, 139, 106, 0.7);
-    color: #0D0730;
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    font-weight: 500;
-    gap: 5px;
+.about-text .dotted-underline-2::after {
+    width: 16rem;
 }
 
-.budget-section button span .cta-start {
-    font-size: 17px;
-}
-
-.budget-section button span .cta-free {
-    font-size: 12px;
-}
-
-.hero-section .budget-img {
+.choose-us-section {
+    padding: 0;
+    background-color: #0D0730;
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.choose-us-text {
+    padding: 2rem 3rem;
+}
+
+.choose-us-text ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #fff;
+    padding: 1.5rem;
+}
+
+.choose-us-text ul li {
+    line-height: 1.5rem;
+}
+
+.choose-us-text h1 {
+    color: #FF8B6A;
+    margin-bottom: 2rem;
+}
+
+.choose-us-text .dotted-underline-2 {
+    color: #fff;
+}
+
+.choose-us-img img {
+    padding-left: 5rem;
+    height: 35rem;
+}
+
+/* //Meet the team// */
+.team-members-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem 3rem;
+    margin-top: 7rem;
+}
+
+.team-members-section .team h1 {
+    display: flex;
     justify-content: center;
 }
 
-.hero-section .budget-img img {
-    height: 49vh;
-    width: 48%;
-    margin-top: 1.5rem;
-    border-radius: 1rem;
-    border: 5px solid #FF8B6A;
-    box-shadow: 0 0 3px 0 rgba(249, 55, 1, 1);
+.team-members-section .team-member-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
-.links {
+.team-members {
+    min-width: 100%;
+    background-color: rgb(250, 241, 241);
     display: flex;
-    align-items: center;
     gap: 2rem;
-    margin-top: 1rem;
-  }
+    overflow-x: scroll;
+    padding: 0 1rem 1.5rem 1rem;
+}
 
-  #dashboard {
-    background-color: inherit;
-    border: 1px solid #FF8B6A;
-    border-radius: 0.8rem;
-    color: #fff;
-    font-weight: 700;
-    padding: 0.8rem;
-  }
+.team-members .team-member {
+    width: 100%;
+    background-color: ;
+}
+
+.team-image {
+    width: 100%;
+}
+
+.team-members .team-member .team-image img {
+    width: 25rem;
+    height: 80%;
+}
+
+.team-members .team-member .team-image .tofunmi{
+    height: 28%;
+}
+
+.team-members h5 {
+    font-size: 1rem;
+}
+
+.team-members .role {
+    font-size: 1rem;
+}
+
+.team-members i {
+    color: #0D0730;
+}
 
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .bar {
         height: 2px;
         width: 27px;
@@ -201,16 +304,14 @@ nav .buttons a:hover {
         padding: 0.8rem;
     }
     
-    .nav--open {
-        transform: translate(0);
-    }
-    
     .hamburger--open .bar:nth-child(1) {
         transform: translateY(12px) rotate(135deg);
     }
+
     .hamburger--open .bar:nth-child(2) {
         opacity: 0;
     }
+
     .hamburger--open .bar:nth-child(3) {
         transform: translateY(-2px) rotate(-135deg);
     }
@@ -219,17 +320,27 @@ nav .buttons a:hover {
         position: fixed;
         top: 60px;
         left: 0;
-        height: 50vh;
+        height: 48vh;
         background-color: #fff;
-        margin-top: 0.4rem;
-        /* background-color: #0D0730; */
+        z-index: 999;
+        margin-top: 0;
         width: 80%;
         padding: 10px 0 25px;
-        transform: translatex(-100%);
-        display: flex;
+        transform: translateX(-100%);
+        display: none;
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hero-section {
+        z-index: 1;
+    }
+
+    nav.nav--open {
+        transform: translateX(0);
+        display: flex;
     }
 
     nav ul {
@@ -238,6 +349,7 @@ nav .buttons a:hover {
 
     .nav {
         display: flex;
+        flex-direction: column;
         gap: 2rem;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
@@ -262,65 +374,95 @@ nav .buttons a:hover {
     }
 
     .nav-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
 
-    .budget-section {
+    .about-section {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        justify-content: center;
         margin-top: 3rem;
     }
 
-    .budget-section h1 {
-        font-size: 1.6rem;
-        line-height: 2rem;
+    .about-section img {
+        width: 100%;
+        height: 20rem;
     }
 
-    .budget-section span {
-        display: block;
-        text-align: center;
-        line-height: 1.2rem;
-        font-size: 0.7rem;
+    .about-text .dotted-underline::after {
+        width: 5rem;
     }
 
-    .budget-section .getStarted {
-        padding: 0.8rem;
+    .about-text .dotted-underline-2::after {
+        width: 16rem;
     }
 
-    .budget-section button .cta-start {
-        font-size: 14px;
+    .about-text h1 {
+        color: #0e0a26;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
     }
-
-    .budget-section button .cta-free {
-        font-size: 10px;
-    }
-
-
-    .budget-section button {
-        padding: 8px;
-        border-radius: 0.8rem;
-    }
-
-    .hero-section .budget-img img {
-        width: 80%;
-        height: 39vh;
-        margin-top: 2rem;
-        border-radius: 1rem;
-        border: 6px solid rgba(255, 139, 106, 0.3);
-        box-shadow: 0 0 3px 0 rgba(249, 55, 1, 1);
-    }
-
-    #dashboard {
-        font-size: 0.89em;
-      }
     
-    .links {
+    .about-text p {
+        color: #0e0a26;
+        line-height: 1.5rem;
+        width: 100%;
+    }
+
+    .team-members-section {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    .team-members {
+        min-width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 1rem;
-        margin-top: 1rem;
-      }   
+        overflow-x: scroll;
+        padding: 0 1rem 1.5rem 1rem;
+    }
+
+    .team-members h5 {
+        font-size: 0.8rem;
+    }
+
+    .team-members .team-member .team-image img {
+        width: 15rem;
+        height: 100%;
+    }
+
+    .team-members-section .team h1 {
+       text-align: center;
+       font-size: 1.5rem;
+    }
+
+    .team-members i {
+        color: #0D0730;
+        font-size: 0.8rem;
+    }
+
+    .team-members .role {
+        font-size: 0.8rem;
+    }
+
+    .choose-us-text {
+        padding: 0.5rem;
+    }
+
+    .choose-us-text h1 {
+        color: #FF8B6A;
+    }
+
+    .choose-us-img img {
+        padding-left: 0.5rem;
+        height: 20rem;
+    }
+
 }
 
 @media (min-width: 769px) {
@@ -332,6 +474,5 @@ nav .buttons a:hover {
         display: flex;
         gap: 2rem;
         transition: all 0.3s ease-in-out;
-     }
-
     }
+}
