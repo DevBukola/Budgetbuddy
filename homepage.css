@@ -332,4 +332,14 @@ nav .buttons a:hover {
         transition: all 0.3s ease-in-out;
      }
 
+     .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 40px;
+        box-shadow: 0 0 3px 0 rgba(255, 139, 106, 0.3);
+    }
+    
+    
+
     }
