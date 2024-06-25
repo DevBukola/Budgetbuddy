@@ -23,13 +23,14 @@ a {
 .header {
     width: 100%;
     top: 0;
+    
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.3rem;
+    padding: 2rem;
     box-shadow: 0 0 3px 0 rgba(255, 139, 106, 0.3);
 }
 
@@ -51,7 +52,7 @@ nav ul {
     display: flex;
     gap: 1rem;
     margin: auto 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.5rem 0.7rem 0.5rem 0.7rem;
     border-radius: 0.5rem;
     background-color: #FF8B6A;
@@ -83,12 +84,12 @@ nav .buttons a:hover {
    transition: all 0.3s ease-in-out;
 } 
 
-.hero-section {
+.hero-div {
     position: relative;
     height: 100vh;
 }
 
-.hero-section .background {
+.hero-div .background {
     width: 100%;
     height: 100%;
 }
@@ -97,7 +98,8 @@ nav .buttons a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(13, 7, 48, 0.9);
+    background-color: rgba(211, 211, 211, 0.6);
+    /* background-color: rgba(13, 7, 48, 1); */
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -105,81 +107,312 @@ nav .buttons a:hover {
     flex-direction: column;
 }
 
-.budget-section {
+.overlapping-divs {
+    position: relative;
+    padding-top: 5rem;
+    background-color: #0D0730;
+}
+
+.top-div {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 2rem;
+    justify-content: center;
     align-items: center;
-    margin-top: 2rem;
     color: #fff;
 }
 
-.budget-section h1 {
+.top-div h1 {
+    width: 40%;
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.top-div h3 {
+    font-size: 0.9rem;
+    text-align: center;
+    width: 33%;
+    line-height: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.top-div a {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: #0D0730;
+    font-weight: 600;
+}
+
+.mockup-img {
+    margin-top: 14rem;
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.mockup-img img {
+    object-fit: cover;
+    min-height: 100%;
+    width: 70%;
+}
+
+.bottom-div {
+   background-color: #fff; 
+   position: absolute;
+   width: 100%;
+   margin-top: -15rem;
+   padding: 5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.bottom-div h3 {
+    color: #FF8B6A;
+    font-weight: bold;
+}
+
+.bottom-div h1 {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.bottom-div p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    width: unset;
+    font-weight: 500;
+}
+
+.features h3 {
+    color: #0D0730;
+}
+
+.features {
+   display: flex;
+   gap: 2rem;
+}
+
+.features .feature {
     display: flex;
     flex-direction: column;
-    font-size: 3rem;
-    line-height: 3.5rem;
+    gap: 1rem;
 }
 
-.budget-section span {
-    display: block;
-    text-align: center;
-    line-height: 1.5rem;
+.features .feature p{
+   font-size: 0.8rem;
+}
+
+.features p {
     font-size: 1rem;
+    width: 100%;
 }
 
-.budget-section button {
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(255, 139, 106, 0.7);
-    color: #0D0730;
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    font-weight: 500;
-    gap: 5px;
-}
-
-.budget-section button span .cta-start {
-    font-size: 17px;
-}
-
-.budget-section button span .cta-free {
-    font-size: 12px;
-}
-
-.hero-section .budget-img {
+.icon {
+    background-color: #0D0730;
+    padding: 1.3rem 2rem;
+    width: 2rem;
+    border-radius: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
 
-.hero-section .budget-img img {
-    height: 49vh;
-    width: 48%;
-    margin-top: 1.5rem;
-    border-radius: 1rem;
-    border: 5px solid #FF8B6A;
-    box-shadow: 0 0 3px 0 rgba(249, 55, 1, 1);
+.icon i {
+  font-size: 1.5rem;  
 }
 
-.links {
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    position: relative;
+    background-color: rgba(211, 211, 211, 0.6);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    position: absolute;
+
+}
+
+.message {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* .contact-section form {
+    float: right;
+} */
+
+.contact .reach-us {
+    padding: 5rem;
+    padding-top: 13rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact .reach-us h3 {
+    font-size: 0.8rem;
+}
+
+.contact .address {
+    padding: 1rem 5rem;
+    padding-bottom: 13rem;
+    display: flex;
+    gap: 10rem;
+}
+
+.contact .address .location {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
+    gap: 1.2rem;
+}
 
-  #dashboard {
+.contact .address .location i{
+    font-size: 1.7rem;
+    color: #0D0730;
+}
+
+.contact .address .location-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-section form {
+    padding: 5rem;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(211, 211, 211, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 0.5rem;
+}
+
+.contact-section form h1 {
+    font-size: 1.5rem;
+}
+
+.contact-section form h4 {
+   font-size: 0.8rem;
+   margin-bottom: 0.7rem;
+}
+
+.contact-section form input {
     background-color: inherit;
-    border: 1px solid #FF8B6A;
-    border-radius: 0.8rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #0D0730;
+}
+
+.contact-section form input:focus {
+    outline: none;
+    border-bottom: 1px solid #FF8B6A;
+}
+
+.contact-section form input:focus::placeholder {
+    color: red;
+}
+
+.contact-section form button {
+    border: none;
+    outline: none;
+    background-color: #0D0730;
     color: #fff;
-    font-weight: 700;
-    padding: 0.8rem;
-  }
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+footer {
+    background-color: #0D0730;
+    margin-top: 5rem;
+}
+
+.testimonials-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.testimonials-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+}
+
+.testimonial h3 {
+    color: #0D0730;
+    font-size: 1.5rem;
+}
+
+.testimonial h2 {
+    font-size: 2.3rem;
+    color: rgba(0, 0, 0, 0.8);;
+}
+
+.testimonial-profile {
+    background-color: #fff;
+    padding: 2rem;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.testimonial-profile p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+.testimonial-profile .rating-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.testimonial-profile .rating-icons i {
+    color: #FF8B6A;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.user-name h3 {
+    font-size: 0.9rem;
+}
+
+.user-image img {
+    width: 3rem;
+    filter: blur(3px);
+    border-radius: 50%;
+}
 
 
 @media (max-width: 768px) {
@@ -265,60 +498,219 @@ nav .buttons a:hover {
     gap: 2rem;
     }
 
-    .budget-section {
+    .overlapping-divs {
+        position: unset;
+        padding-top: 5rem;
+        background-color: #0D0730;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .top-div {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+        justify-content: unset;
+        align-items: unset;
+        color: #fff;
+    }
+
+    .top-div h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .top-div h3 {
+        font-size: 0.8rem;
+        text-align: center;
+        width: 100%;
+        line-height: 1.5rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .top-div a {
+        text-align: center;
+        margin: 0 3rem;
+        width: unset;
+        font-size: 0.9rem;
+    }
+
+    .mockup-img {
+        width: 100%;
+        height: unset;
+        overflow: hidden;
+        margin-top: unset;
+    }
+
+    .mockup-img img {
+         width: 100%;
+    }
+
+    .bottom-div {
+        background-color: #fff; 
+        position: unset;
+        width: 100%;
+        margin-top: unset;
+        padding: 1rem;
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+     }
+
+     .bottom-div h3 {
+      font-size: 0.9rem;
+    }
+
+    .bottom-div h1 {
+        font-size: 1.4rem;
+    }
+
+     .bottom-div p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+     .features {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+     }
+
+     .features .feature {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .icon {
+        background-color: #0D0730;
+        padding: 0.8rem 1.5rem;
+        width: 1.5rem;
+        border-radius: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        position: unset;
+    }
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        position: unset;
+    
+    }
+    
+    .message {
+        display: flex;
+        justify-content: center;
+        padding-right: unset;
+        position: unset;
         margin-top: 3rem;
     }
 
-    .budget-section h1 {
-        font-size: 1.6rem;
-        line-height: 2rem;
+    .contact-section form {
+        padding: 3rem;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+        background-color: rgba(211, 211, 211, 0.8);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 
-    .budget-section span {
-        display: block;
-        text-align: center;
-        line-height: 1.2rem;
+    .contact .reach-us {
+        padding: 1rem;
+        padding-bottom: 2rem;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contact .reach-us h3 {
         font-size: 0.7rem;
     }
 
-    .budget-section .getStarted {
-        padding: 0.8rem;
+    .contact .reach-us h1 {
+        font-size: 1rem;
     }
-
-    .budget-section button .cta-start {
-        font-size: 14px;
-    }
-
-    .budget-section button .cta-free {
-        font-size: 10px;
-    }
-
-
-    .budget-section button {
-        padding: 8px;
-        border-radius: 0.8rem;
-    }
-
-    .hero-section .budget-img img {
-        width: 80%;
-        height: 39vh;
-        margin-top: 2rem;
-        border-radius: 1rem;
-        border: 6px solid rgba(255, 139, 106, 0.3);
-        box-shadow: 0 0 3px 0 rgba(249, 55, 1, 1);
-    }
-
-    #dashboard {
-        font-size: 0.89em;
-      }
     
-    .links {
+    .contact .address {
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 5rem;
+    }
+
+    .contact .address .location i {
+        font-size: 1.3rem;
+    }
+
+    .contact .address .location-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contact .address .location-text h3{
+       font-size: 1rem;
+    }
+
+    .contact .address .location-text p{
+        font-size: 0.9rem;
+    }
+
+    .contact-section form h1 {
+        font-size: 1rem;
+    }
+
+    .testimonials-section {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .testimonials-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
         gap: 1rem;
-        margin-top: 1rem;
-      }   
+    }
+
+    .testimonial-profile {
+        background-color: #fff;
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .testimonial h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonial h3 {
+       font-size: 1.2rem;
+    }
+
+    .testimonial-profile .rating-icons i{
+       font-size: 0.8rem;
+    }
 }
 
 @media (min-width: 769px) {
