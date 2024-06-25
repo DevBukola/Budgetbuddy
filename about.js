@@ -1,4 +1,3 @@
-// about.js
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const nav = document.querySelector('nav');
@@ -9,43 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+const header = document.querySelector('.header');
+console.log('header')
 
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.carousel-button-right');
-    const prevButton = document.querySelector('.carousel-button-left');
-    const slideWidth = slides[0].getBoundingClientRect().width;
-
-    // Arrange slides next to each other
-    const setSlidePosition = (slide, index) => {
-        slide.style.left = slideWidth * index + 'px';
-    };
-    slides.forEach(setSlidePosition);
-
-    const moveToSlide = (track, currentSlide, targetSlide) => {
-        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-        currentSlide.classList.remove('current-slide');
-        targetSlide.classList.add('current-slide');
-    };
-
-    prevButton.addEventListener('click', e => {
-        const currentSlide = track.querySelector('.current-slide');
-        const prevSlide = currentSlide.previousElementSibling;
-
-        moveToSlide(track, currentSlide, prevSlide);
-    });
-
-    nextButton.addEventListener('click', e => {
-        const currentSlide = track.querySelector('.current-slide');
-        const nextSlide = currentSlide.nextElementSibling;
-
-        moveToSlide(track, currentSlide, nextSlide);
-    });
-
-    // Set the first slide as the current slide
-    slides[0].classList.add('current-slide');
-});
+window.addEventListener('scroll', () =>
+     {
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled')
+            console.log(header.classList)
+        } else {
+            header.classList.remove('scrolled');
+        }
+     })

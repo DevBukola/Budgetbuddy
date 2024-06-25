@@ -23,15 +23,25 @@ a {
 .header {
     width: 100%;
     top: 0;
+    left: 0;
+    position: fixed;
+    transition: background-color 0.5s;
+    z-index: 1000;
     background-color: #0D0730;
 }
+
+.header.scrolled {
+    /* background-color: rgba(13, 7, 48, 0.5) !important; */
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.3rem;
-    box-shadow: 0 0 3px 0 rgba(255, 139, 106, 0.3);
+    padding: 0.3rem 2rem;
+    box-shadow: 0 0 3px 0 rgba(255, 139, 106, 0.5);
 }
 
 .header-content img {
@@ -52,7 +62,7 @@ nav ul {
     display: flex;
     gap: 1rem;
     margin: auto 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.5rem 0.7rem 0.5rem 0.7rem;
     border-radius: 0.5rem;
     background-color: #FF8B6A;
@@ -114,7 +124,7 @@ nav .buttons a:hover {
     color: #fff;
 }
 
-.background-color {
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -130,12 +140,12 @@ nav .buttons a:hover {
     flex-direction: column;
 }
 
-.background-color h1 {
+.background h1 {
     color: #fff;
 }
 
 .about-section {
-    padding: 2rem 3rem;
+    padding: 3rem;
     background-color: #f0e9e7;
     display: flex;
     gap: 2rem;
@@ -603,12 +613,21 @@ footer .why-choose-us h3 {
         font-size: 1rem;
     }
 
-    footer .reach-us-details p, footer .quick-link-details p, footer.quick-link-details a {
+    footer .reach-us-details p, footer .quick-link-details p {
+        font-size: 0.9rem;
+    }
+
+    footer .quick-link-details a {
         font-size: 0.9rem;
     }
 
     footer .reach-us-details {
         gap: 1rem;
+    }
+
+    .hero-section {
+        position: relative;
+        height: unset;
     }
 }
 
