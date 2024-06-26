@@ -1,3 +1,4 @@
+//index.html JS//
 const navElement = document.querySelector('.nav');
 const hamburgerElement = document.querySelector('.hamburger');
 const goDashboard = document.querySelector('.btn');
@@ -42,3 +43,4 @@ const checkLoginStatus = () => {
 
 
 checkLoginStatus()
+
